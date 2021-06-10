@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>我的javascript测试</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        //清空按钮
+        window.onload=function(){
+            var btn5=document.getElementById("btn5");
+            btn5.onclick=function(){
+                  var input1=document.getElementById("input1");
+                  input1.value="";
+
+                  var input2=document.getElementById("input2");
+                  input2.value="";
+
+                  var input3=document.getElementById("input3");
+                  input3.value="";
+            }
+
+            var btn4=document.getElementById("btn4").onclick=function(){
+                var input1=document.getElementById("input1");
+                 var input2=document.getElementById("input2");
+                  var input3=document.getElementById("input3");
+                  if(input2.value!=input3.value)
+                  {
+                      alert("两次密码不匹配！！！");
+                      input2.value="";
+                      input3.value="";
+                  }
+                  else if(input1.value.length>15||input1.value.length<6)
+                  {
+                      alert("用户名必须在6-15之间！！！")
+                  }
+                  
+            }
+        }
+        </script>
+        <input type="button" id="btn1" value="用户名">
+        <input type="test" id="input1">
+        <br><br>
+        <input type="button" id="btn2" value="密  码">
+        <input type="password" id="input2">
+        <br><br>
+        <input type="button" id="btn3" value="确认密码">
+        <input type="password" id="input3">
+        <br><br>
+        <span><input type="button" id="btn4" value="注册"></span>
+        <span><input type="button" id="btn5" value="清空"></span>
+        
+    </body>
+</html>
